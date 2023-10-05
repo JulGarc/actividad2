@@ -1,0 +1,144 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+body {
+  margin: 1rem 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(89, 136, 50);
+  
+}
+footer {
+  background-color: #333; /* Color de fondo del footer */
+  color: #fff; /* Color del texto en el footer */
+  text-align: center;
+  padding: 10px 0; /* Espaciado interior superior e inferior */
+}
+
+/* Estilos para el texto del footer */
+footer p {
+  margin: 0; /* Elimina el margen predeterminado */
+  font-size: 14px;
+}
+.feedback {
+  font-size: 0.875em;
+}
+
+
+.r-link{
+  display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.r-link[href]{
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+.r-list{
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+
+
+
+.menu{
+  --rLinkColor: var(--menuLinkColor, currentColor);
+  border-radius: 8px;
+}
+
+.menu__link{
+  display: var(--menuLinkDisplay, block);
+  
+}
+
+
+
+.menu__link:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+
+
+.menu:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgb(89, 136, 50));
+}
+
+
+.menu{
+  background-color: var(--menuBackgroundColor, #f0f0f0);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, 0.24));
+  margin-bottom: 10px;
+
+}
+
+.menu__list{
+  display: flex;  
+  justify-content: space-evenly;
+  
+}
+
+.menu__link{
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  
+
+}
+
+
+.text-underlined{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+
+.text-underlined::before, 
+.text-underlined::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+  
+}
+
+.text-underlined::before{
+  left: 50%;
+  transform: translateX(-50%); 
+  
+}
+
+.text-underlined::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+
+.text-underlined:hover::before, 
+.text-underlined:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+
+
+footer {
+  background-color: rgba(255, 255, 255, 0.24);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
